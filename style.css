@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+  html {
+    overflow-x: hidden;
+    scrollbar-width: none;
+  }
+  
+  html::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
+  :root {
+    --red-color: #6b2325;
+  }
+  
+  .navbar-shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .navbar{
+    background-color: #ffffff;
+  }
+  
+  .navbar a {
+    color: black;
+    text-decoration: none;
+  }
+  .navbar-brand{
+    color: var(--red-color) !important;
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px !important;
+  }
+  
+  .nav-link {
+    position: relative;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+  }
+  
+  /* The animated underline */
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background-color: var(--red-color);
+    transition: width 0.4s ease;
+  }
+  
+  /* On hover or active, animate border and text */
+  .nav-link:hover,
+  .nav-link:focus,
+  .nav-link:active,
+  .nav-link.active {
+    color: var(--red-color) !important;
+    font-weight: 700 !important;
+  }
+  
+  .nav-link:hover::after,
+  .nav-link:focus::after,
+  .nav-link:active::after,
+  .nav-link.active::after {
+    width: 100%;
+  }
+  section {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden !important;
+  }
+  
+  .home {
+    background-image: url('assets/home-bg.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .home-page-heading{
+    color: var(--red-color);
+    font-family:ui-rounded;
+    font-weight: 600;
+  }
+  .title{
+    color: var(--red-color);
+    font-size: 20px;
+  }
+  .about-heading{
+    font-family:ui-rounded;
+    
+  }
+
+  .about-highlight {
+    color:var(--red-color);
+    font-weight: 600;
+  }
+  .about-btn {
+    background-color:var(--red-color);
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  .read-btn:hover {
+    background-color:#ffffff;
+    color: black;
+    border: 5px solid var(--red-color);
+  }
+  .about-para{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 40px;
+  }
+  /* @media (max-width: 768px) {
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  } */
+
+  .heading-title{
+    color: var(--red-color);
+    font-family:ui-rounded;
+    text-align: center;
+    margin-top: 50px;
+  }
+  .services{
+    background-color: rgba(107, 35, 37, 0.1); /* 70% opaque, appears lighter */
+
+  }
+  .underline {
+    width: 5%;
+    height: 1px;
+    background-color: #6b2325; /* or any color you like */
+    margin-top: 3px;
+  }
+
+
+  .hover-card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hover-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+  }
+
+  .hover-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(107, 35, 37, 0.6); /* Adjust overlay color */
+    color: white;
+    width: 0px;
+    height: 100%;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.2s ease-in;
+  }
+
+  .hover-card:hover .hover-content {
+    opacity: 1;
+    width: 100%;
+  }
+  .service-title{
+    font-size: 30px;
+    font-family:ui-rounded;
+  }
+  .service-para{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+
+
+  }
+.trust-card{
+  height: 320px;
+  /* border: none !important; */
+  border: 1px solid var(--red-color);
+  box-shadow: 0 4px 10px rgba(107, 35, 37, 0.4) !important;
+  cursor: pointer;
+
+
+}
+.trust-card:hover{
+  background-color: rgba(107, 35, 37, 0.4);
+ 
+
+}
+ 
+  .trust-card img {
+    width: 100px;
+    margin: 0 auto 15px;
+    display: block;
+  }
+
+  .trust-card h5 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    
+  
+  }
+
+  .trust-card p {
+    color: #555;
+    /* color: var(--red-color); */
+   
+    
+  }
+  .mission-vission{
+    background-color: rgba(107, 35, 37, 0.1);
+
+  }
+  .mission-vission h4{
+    color: var(--red-color);
+    font-size: 20px;
+  }
+  .mission-vission p{
+    font-weight: 400;
+    color: rgb(85, 85, 85);
+    font-size: 16px;
+  }
+  .our-vision{ 
+    background-color: rgba(107, 35, 37, 0.4);
+    padding: 10px;
+    border-radius: 10px;
+    border-left: 5px solid var(--red-color);
+
+  }
+  .mission:hover,.value:hover {
+    
+  
+    background-color: rgba(107, 35, 37, 0.4);
+    padding: 10px;
+    border-radius: 10px;
+    border-left: 5px solid var(--red-color);
+  }
+
+  .product-card {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid rgb(222, 222, 222);
+    height: 250px;
+  }
+  .product-card img {
+    /* max-width: 100%;
+    height: auto;
+    margin-bottom: 15px; */
+    width: 100%;
+    height: 80%;
+    background-size: cover;
+    background-position: center;
+    transition: all 1s ease;
+  }
+  .product-card img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  .product-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    margin-top: 20px;
+    color: var(--red-color);
+   
+  }
+
+  .contact-box {
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #fff;
+  }
+
+  .contact-box .icon-col {
+    width: 40px;
+    text-align: center;
+    font-size: 18px;
+    color: #6b2325;
+  }
+
+  .form-control:focus {
+    box-shadow: none;
+    border-color: #6b2325;
+  }
+
+  .btn-submit {
+    background-color: #6b2325;
+    color: white;
+  }
+
+  .btn-submit:hover {
+    background-color: #0056b3;
+  }
+  footer{
+    background-color: #6b2325;
+  }
+
+
+ 
+  
+
+  @media (max-width: 768px) {
+    .home{
+        height: 100vh;
+    }
+   section{
+    height: auto;
+   }
+   .about-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+   .about-content>*{
+    text-align: center;
+   }
+
+  }
